@@ -1,24 +1,66 @@
 import path from "path";
-import { CollectionConfig } from "payload/types";
+import { Access, CollectionConfig } from "payload/types";
 import dotenv from "dotenv";
+import { PrimaryActionEmailHtml } from "../components/emails/PrimaryActionEmail";
 
 dotenv.config({
   path: path.resolve(__dirname, "../../.env"),
 });
+
+const adminsAndUser: Access = ({ req: { user } }) => {
+  if (user && user.role === "admin") return true;
+
+  return {
+    id: {
+      equals: user.id,
+    },
+  };
+};
+
 export const Users: CollectionConfig = {
   slug: "users",
   auth: {
     verify: {
       generateEmailHTML: ({ token }) => {
-        return `<p>Click the following link to verify your account:</p> <a href="${process.env.NEXT_PUBLIC_SERVER}/verify-email?token=${token}">Verify your account</a> `;
+        return PrimaryActionEmailHtml({
+          actionLabel: "Verify your account",
+          buttonText: "Verify account",
+          href: `${process.env.NEXT_PUBLIC_SERVER_URL}/verify-email?token=${token}`,
+        });
       },
     },
   },
   access: {
-    read: () => true,
+    read: adminsAndUser,
     create: () => true,
+    update: ({ req }) => req.user.role === "admin",
+    delete: ({ req }) => req.user.role === "admin",
+  },
+  admin: {
+    hidden: ({ user }) => user.role !== "admin",
+    defaultColumns: ["id"],
   },
   fields: [
+    {
+      name: "products",
+      label: "Products",
+      admin: {
+        condition: () => false,
+      },
+      type: "relationship",
+      relationTo: "products",
+      hasMany: true,
+    },
+    {
+      name: "product_files",
+      label: "Product files",
+      admin: {
+        condition: () => false,
+      },
+      type: "relationship",
+      relationTo: "product_files",
+      hasMany: true,
+    },
     {
       name: "role",
       label: "Role",
