@@ -1,18 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        hostname: "digitalmarket-production-84d0.up.railway.app",
-        protocol: "https", // specify the protocol if applicable
-        port: "*",
-      },
-      {
-        hostname: "localhost",
-        port: 3000,
-        protocol: "http", // specify the protocol if applicable
-      },
-    ],
+    // using deprecated modal cos new one wont work, TODO: Find out why
+    domains: ["localhost", "digitalmarket-production-84d0.up.railway.app"],
   },
 };
 
