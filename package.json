@@ -1,5 +1,5 @@
 {
-  "name": "Meme-market",
+  "name": "meme-market",
   "version": "0.1.1",
   "private": true,
   "main": "dist/server.js",
