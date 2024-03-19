@@ -1,43 +1,43 @@
 export const PRODUCT_CATEGORIES = [
   {
-    label: "Foods and Drinks",
-    value: "foods_and_drinks" as const,
+    label: "GIF and Short Memes",
+    value: "GIF_and_short_memes" as const,
     featured: [
       {
         name: "Editor picks",
         href: "#",
-        imageSource: "/nav/food-drinks/",
+        imageSource: "/nav/gif_short_mems/",
       },
       {
         name: "Best sellers",
         href: "#",
-        imageSource: "/nav/food-drinks/",
+        imageSource: "/nav/gif_short_mems/",
       },
       {
-        name: "New Arrivals",
+        name: "New short memes",
         href: "#",
-        imageSource: "/nav/food-drinks/",
+        imageSource: "/nav/gif_short_mems/",
       },
     ],
   },
   {
-    label: "Travel",
-    value: "travel" as const,
+    label: "Static Memes",
+    value: "static_memes" as const,
     featured: [
       {
         name: "Editor picks",
         href: "#",
-        imageSource: "/nav/travel /",
+        imageSource: "/nav/static-meme/",
       },
       {
-        name: "Best Locations",
+        name: "Trending memes",
         href: "#",
-        imageSource: "/nav/travel /",
+        imageSource: "/nav/static-meme/",
       },
       {
-        name: "New Locations",
+        name: "New memes",
         href: "#",
-        imageSource: "/nav/travel /",
+        imageSource: "/nav/static-meme/",
       },
     ],
   },

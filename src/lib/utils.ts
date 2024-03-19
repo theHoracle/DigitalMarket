@@ -25,8 +25,8 @@ export function formatPrice(
 }
 
 export function constructMetadata({
-  title = "DigitalHippo - the marketplace for digital assets",
-  description = "DigitalHippo is an open-source marketplace for high-quality digital goods.",
+  title = "MemeMarket - the marketplace for quality memes",
+  description = "MemeMarker is an open-source marketplace for high-quality memes.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,
@@ -54,10 +54,12 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@joshtriedcoding",
+      creator: "@theHoracle",
     },
     icons,
-    metadataBase: new URL("https://digitalhippo.up.railway.app"),
+    metadataBase: new URL(
+      "http://digitalmarket-production-84d0.up.railway.app/"
+    ),
     ...(noIndex && {
       robots: {
         index: false,

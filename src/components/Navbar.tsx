@@ -20,9 +20,9 @@ const Navbar = async () => {
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
               {/* TODO: Mobile nav */}
-              <MobileNav />
+              <MobileNav user={user} />
 
-              <div className="ml-4 md:ml-0 flex">
+              <div className="ml-4 lg:ml-0 flex">
                 <Link href="/">
                   <Icons.logo className="h-10 w-10" />
                 </Link>
@@ -65,10 +65,9 @@ const Navbar = async () => {
                       />
                     </div>
                   )}
-
-                  <div className="ml-4 flow-root lg:ml-6">
-                    <Cart />
-                  </div>
+                </div>
+                <div className="ml-4 flow-root lg:ml-6">
+                  <Cart />
                 </div>
               </div>
             </div>

@@ -34,14 +34,19 @@ export default function Home() {
             <span className="text-red-600">digital service.</span>
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
-            Welcome to DigitalOracle. Your one stop shop for all the service you
-            will ever need. Every service is quality assured
+            Welcome to MemeMarket. Your one stop shop for all the memes you will
+            ever need to dominate. Every meme is quality😎
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href="/products" className={buttonVariants()}>
-              Browse Products
+              Browse Memes
             </Link>
-            <Button variant="ghost">Our quality promise &rarr;</Button>
+            <Link
+              href="/disclaimer"
+              className={buttonVariants({ variant: "ghost" })}
+            >
+              Our quality promise &rarr;
+            </Link>
           </div>
         </div>
         <ProductReel
