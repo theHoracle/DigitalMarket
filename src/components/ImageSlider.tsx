@@ -76,7 +76,7 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
         // modules={[Pagination]}
         pagination={{
           renderBullet: (_, className) => {
-            return `<span class="rounded-full transitio ${className}"></span>`;
+            return `<span class="rounded-full transition ${className}"></span>`;
           },
         }}
         slidesPerView={1}
