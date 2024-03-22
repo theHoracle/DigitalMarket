@@ -32,12 +32,11 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
   }, [swiper, urls]);
 
   const loaderProp = ({ src }: { src: string }) => {
-    const regex = /\./;
+    const regex = /\\/;
     if (regex.test(src)) {
       return src;
     }
-    src =
-      "https://github.com/joschan21/digitalhippo/blob/master/public/thumbnail.jpg";
+    src = "/hippo-empty-cart.png";
     return src;
   };
 
