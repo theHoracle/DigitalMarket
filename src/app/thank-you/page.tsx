@@ -46,6 +46,9 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
     0
   );
 
+  const loaderProp = ({ src }: { src: string }) => {
+    return src;
+  };
   return (
     <main className="relative lg:min-h-full">
       <div className="h-80 hidden lg:block overflow-hidden lg:absolute lg:w-1/2 lg:pr-4 xl:pr-12">
@@ -105,6 +108,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
                         alt={`${product.name} image`}
                         fill
                         className="flex-none rounded-md bg-gray-100 object-cover object-center"
+                        loader={loaderProp}
                       />
                     ) : null}
                   </div>
