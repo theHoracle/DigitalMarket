@@ -32,11 +32,6 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
   }, [swiper, urls]);
 
   const loaderProp = ({ src }: { src: string }) => {
-    const regex = /\\/;
-    if (regex.test(src)) {
-      return src;
-    }
-    src = "/hippo-empty-cart.png";
     return src;
   };
 

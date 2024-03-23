@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { cn } from "@/lib/utils";
 import { useOnClickOutside } from "@/hooks/use-onClick-outside";
@@ -147,7 +147,10 @@ const MobileNav = (props: MobileNavProps) => {
                     <Link
                       onClick={() => closeOnCurrent("/sign-in")}
                       href="/sign-in"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className={cn(
+                        buttonVariants({ variant: "ghost" }),
+                        "-m-2 block p-2 font-medium text-gray-900"
+                      )}
                     >
                       Sign in
                     </Link>
@@ -156,7 +159,10 @@ const MobileNav = (props: MobileNavProps) => {
                     <Link
                       onClick={() => closeOnCurrent("/sign-up")}
                       href="/sign-up"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className={cn(
+                        buttonVariants(),
+                        "-m-2 block p-2 font-medium text-gray-900"
+                      )}
                     >
                       Sign up
                     </Link>

@@ -14,7 +14,7 @@ const perks = [
     name: "Gurranteed Quality",
     icon: CheckCircle,
     description:
-      "Every service on our platform is verified by our team to ensure highest quality standard. Not happy? We offer a 3-day refund guranteed.",
+      "Every meme on our platform is verified by our team to ensure highest quality standard. Not happy? We offer a 3-day 'refun' guranteed.",
   },
   {
     name: "For the planet",
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl tracking-tight font-bold text-gray-900 sm:text-6xl">
             Your marketplace for high-quality{" "}
-            <span className="text-red-600">digital service.</span>
+            <span className="text-red-600">internet memes.</span>
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
             Welcome to MemeMarket. Your one stop shop for all the memes you will
@@ -42,7 +42,7 @@ export default function Home() {
               Browse Memes
             </Link>
             <Link
-              href="/disclaimer"
+              href="/legal-information/disclaimer"
               className={buttonVariants({ variant: "ghost" })}
             >
               Our quality promise &rarr;

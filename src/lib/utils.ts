@@ -26,7 +26,7 @@ export function formatPrice(
 
 export function constructMetadata({
   title = "MemeMarket - the marketplace for quality memes",
-  description = "MemeMarker is an open-source marketplace for high-quality memes.",
+  description = "MemeMarker is an open-source marketplace for high-quality internet memes.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,
@@ -57,9 +57,7 @@ export function constructMetadata({
       creator: "@theHoracle",
     },
     icons,
-    metadataBase: new URL(
-      "http://digitalmarket-production-84d0.up.railway.app/"
-    ),
+    metadataBase: new URL("http://mememarket-production.up.railway.app/"),
     ...(noIndex && {
       robots: {
         index: false,

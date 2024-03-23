@@ -6,17 +6,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Editor picks",
         href: "#",
-        imageSource: "/nav/gif_short_mems/",
+        imageSource: "/nav/aki-and-pawpaw.jpeg",
       },
       {
         name: "Best sellers",
         href: "#",
-        imageSource: "/nav/gif_short_mems/",
+        imageSource: "/nav/mr-ibu.jpeg",
       },
       {
         name: "New short memes",
         href: "#",
-        imageSource: "/nav/gif_short_mems/",
+        imageSource: "/nav/man-sitting.jpeg",
       },
     ],
   },
@@ -27,17 +27,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Editor picks",
         href: "#",
-        imageSource: "/nav/static-meme/",
+        imageSource: "/nav/troll-face.jpeg",
       },
       {
         name: "Trending memes",
         href: "#",
-        imageSource: "/nav/static-meme/",
+        imageSource: "/nav/xavier-face.webp",
       },
       {
         name: "New memes",
         href: "#",
-        imageSource: "/nav/static-meme/",
+        imageSource: "/nav/creepy-face.webp",
       },
     ],
   },

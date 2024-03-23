@@ -15,6 +15,10 @@ const CartItem = ({ product }: { product: Product }) => {
   const label = PRODUCT_CATEGORIES.find(
     ({ value }) => value === product.category
   )?.label;
+
+  const loaderProp = ({ src }: { src: string }) => {
+    return src;
+  };
   return (
     <div className="space-y-3 py-2">
       <div className="flex items-start justify-between gap-4">
@@ -26,6 +30,7 @@ const CartItem = ({ product }: { product: Product }) => {
                 fill
                 alt={product.name}
                 className="absolute object-cover"
+                loader={loaderProp}
               />
             ) : (
               <div className="flex h-full items-center justify-center bg-secondary">
