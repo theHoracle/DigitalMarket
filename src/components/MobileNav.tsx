@@ -142,7 +142,7 @@ const MobileNav = (props: MobileNavProps) => {
                   </div>
                 </div>
               ) : (
-                <div>
+                <div className="flex flex-col gap-2">
                   <div className="flow-root">
                     <Link
                       onClick={() => closeOnCurrent("/sign-in")}
