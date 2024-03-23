@@ -18,8 +18,8 @@ const DisclaimerPage = () => {
             className="border-t w-full border-muted-foreground"
           />
           <p className={paragraphStyles}>
-            Welcome to Meme Market! We're delighted to have you here. It's
-            important to note that Meme Market is created purely for
+            Welcome to Meme Market! We&apos;re delighted to have you here.
+            It&apos;s important to note that Meme Market is created purely for
             entertainment and learning purposes. The memes and content provided
             on this site are meant to bring joy, laughter, and perhaps a little
             bit of education along the way. While we strive to maintain accuracy
@@ -32,19 +32,19 @@ const DisclaimerPage = () => {
             <div className="flex flex-col gap-2">
               <h3 className={headingStyles}>Payment Information</h3>
               <p className={paragraphStyles}>
-                We'd like to inform our users that the Stripe account linked to
-                this site is connected to a test account. This means that any
-                transactions made on this site are not real purchases. To
-                facilitate your experience, you can use the following demo card
-                number provided by Stripe for testing purposes:{" "}
+                We&apos;d like to inform our users that the Stripe account
+                linked to this site is connected to a test account. This means
+                that any transactions made on this site are not real purchases.
+                To facilitate your experience, you can use the following demo
+                card number provided by Stripe for testing purposes:{" "}
                 <span className="bg-zinc-300 font-medium rounded px-2 py-1 mr-1">
                   4242 4242 4242 4242
                 </span>{" "}
-                Feel free to use this demo card number to "purchase" any items
-                available on our site. Please be assured that no real financial
-                transactions will occur, and your personal information is safe
-                with us. We do not store any payment information provided during
-                the testing process.
+                Feel free to use this demo card number to &ldquo;purchase&rdquo;
+                any items available on our site. Please be assured that no real
+                financial transactions will occur, and your personal information
+                is safe with us. We do not store any payment information
+                provided during the testing process.
               </p>
             </div>
             <div className="flex flex-col gap-2">
