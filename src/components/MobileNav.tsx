@@ -66,7 +66,10 @@ const MobileNav = (props: MobileNavProps) => {
 
       <div className="fixed overflow-y-scroll overscroll-y-none inset-0 z-40 flex">
         <div className="w-4/5">
-          <div className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+          <div
+            ref={mobileNavRef}
+            className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl"
+          >
             <div className="flex px-4 pb-2 pt-5">
               <button
                 type="button"
@@ -77,7 +80,7 @@ const MobileNav = (props: MobileNavProps) => {
               </button>
             </div>
 
-            <div className="mt-2" ref={mobileNavRef}>
+            <div className="mt-2">
               <ul>
                 {PRODUCT_CATEGORIES.map((category) => (
                   <li key={category.label} className="space-y-5 px-4 pb-4 pt-5">
