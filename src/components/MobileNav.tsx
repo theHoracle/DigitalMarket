@@ -64,10 +64,7 @@ const MobileNav = (props: MobileNavProps) => {
         <div className="fixed inset-0 bg-black bg-opacity-25" />
       </div>
 
-      <div
-        ref={mobileNavRef}
-        className="fixed overflow-y-scroll overscroll-y-none inset-0 z-40 flex"
-      >
+      <div className="fixed overflow-y-scroll overscroll-y-none inset-0 z-40 flex">
         <div className="w-4/5">
           <div className="relative flex w-full max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl">
             <div className="flex px-4 pb-2 pt-5">
@@ -80,7 +77,7 @@ const MobileNav = (props: MobileNavProps) => {
               </button>
             </div>
 
-            <div className="mt-2">
+            <div className="mt-2" ref={mobileNavRef}>
               <ul>
                 {PRODUCT_CATEGORIES.map((category) => (
                   <li key={category.label} className="space-y-5 px-4 pb-4 pt-5">
@@ -142,14 +139,14 @@ const MobileNav = (props: MobileNavProps) => {
                   </div>
                 </div>
               ) : (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-6 shadow">
                   <div className="flow-root">
                     <Link
                       onClick={() => closeOnCurrent("/sign-in")}
                       href="/sign-in"
                       className={cn(
-                        buttonVariants({ variant: "ghost" }),
-                        "-m-2 block p-2 font-medium text-gray-900"
+                        buttonVariants({ variant: "outline" }),
+                        "-m-2 block p-2 font-medium text-gray-900 text-center"
                       )}
                     >
                       Sign in
@@ -161,7 +158,7 @@ const MobileNav = (props: MobileNavProps) => {
                       href="/sign-up"
                       className={cn(
                         buttonVariants(),
-                        "-m-2 block p-2 font-medium text-gray-900"
+                        "-m-2 block p-2 font-medium text-gray-50 shadow text-center"
                       )}
                     >
                       Sign up
